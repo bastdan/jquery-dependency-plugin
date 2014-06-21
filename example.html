@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Dependency Elements Plugin - Examples</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery-dependency-elements-plugin.js"></script>
+	</head>
+	<body>
+		
+		<!-- Testing text element -->
+		<div id="textElements">
+			<p>
+				<h2>Text inputs</h2>
+				<input type="text" id="txtOne" /><br />
+				<input type="text" id="txtTwo" data-depends-on="#txtOne" data-depends-clearwhendisabled="true" />
+				<input type="text" id="txtThree" data-depends-on="#txtOne" />
+			</p>
+		</div>
+		<hr>
+
+		<!-- Testing select element -->
+		<div id="selectElements">
+			<p>
+				<h2>Selects</h2>
+				<select id="selectOne" data-depends-lockvalue="-1">
+					<option value="-1">Choose an option...</option>
+					<option value="0">One</<option>
+					<option value="1">Two</<option>
+					<option value="2">Three</<option>
+				</select>
+				<br />
+				<button data-depends-on="#selectOne" onclick="return false;">Click me</button>
+			</p>
+		</div>
+		<hr>
+
+		<!-- Testing checkbox element -->
+		<div id="checkboxElements">
+			<p>
+				<h2>Checkboxes</h2>
+				<input type="checkbox" id="checkboxExample">Test me<br>
+				<button data-depends-on="#checkboxExample" onclick="return false;">Click here!</button>
+			</p>
+		</div>
+
+	</body>
+</html>
